@@ -1,7 +1,7 @@
 package main;
 
-import main.entities.Student;
-import main.entities.Teacher;
+import entities.Student;
+import entities.Teacher;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

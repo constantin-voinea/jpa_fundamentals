@@ -2,10 +2,10 @@ package main;
 
 import main.embeddables.Address;
 import main.embeddables.BuildingPK;
-import main.entities.Building;
-import main.entities.Company;
-import main.entities.Department;
-import main.entities.Person;
+import entities.Building;
+import entities.Company;
+import entities.Department;
+import entities.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

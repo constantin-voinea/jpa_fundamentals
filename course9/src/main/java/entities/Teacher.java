@@ -1,4 +1,4 @@
-package main.entities;
+package entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import java.util.List;
+import javax.persistence.MapKeyColumn;
+import java.util.Map;
 
 /**
  * @author cvoinea
@@ -21,11 +22,10 @@ public class Teacher {
 
     private String name;
 
-    @ManyToMany // owner of the relationship
-    @JoinTable(name = "teacher_student",
-    joinColumns = @JoinColumn(name = "teacher"),
-    inverseJoinColumns = @JoinColumn(name = "student"))
-    private List<Student> students;
+    @ManyToMany
+    @JoinTable(name = "teach_stud", joinColumns = @JoinColumn(name = "teacher"), inverseJoinColumns = @JoinColumn(name = "student"))
+    @MapKeyColumn(name = "course")
+    private Map<String, Student> students;
 
     public int getId() {
         return id;
@@ -43,11 +43,11 @@ public class Teacher {
         this.name = name;
     }
 
-    public List<Student> getStudents() {
+    public Map<String, Student> getStudents() {
         return students;
     }
 
-    public void setStudents(List<Student> students) {
+    public void setStudents(Map<String, Student> students) {
         this.students = students;
     }
 }

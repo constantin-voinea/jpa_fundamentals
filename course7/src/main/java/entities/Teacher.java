@@ -1,9 +1,11 @@
-package main.entities;
+package entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
@@ -11,7 +13,7 @@ import java.util.List;
  * @author cvoinea
  */
 @Entity
-public class Student {
+public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,8 +21,11 @@ public class Student {
 
     private String name;
 
-    @ManyToMany(mappedBy = "students")
-    private List<Teacher> teachers;
+    @ManyToMany // owner of the relationship
+    @JoinTable(name = "teacher_student",
+    joinColumns = @JoinColumn(name = "teacher"),
+    inverseJoinColumns = @JoinColumn(name = "student"))
+    private List<Student> students;
 
     public int getId() {
         return id;
@@ -38,12 +43,11 @@ public class Student {
         this.name = name;
     }
 
-    public List<Teacher> getTeachers() {
-        return teachers;
+    public List<Student> getStudents() {
+        return students;
     }
 
-    public void setTeachers(List<Teacher> teachers) {
-        this.teachers = teachers;
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 }
-

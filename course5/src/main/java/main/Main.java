@@ -1,8 +1,8 @@
 package main;
 
-import main.entities.Company;
-import main.entities.Detail;
-import main.entities.Product;
+import entities.Company;
+import entities.Detail;
+import entities.Product;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
