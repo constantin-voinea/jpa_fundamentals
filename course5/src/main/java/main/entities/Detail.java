@@ -19,7 +19,7 @@ public class Detail {
 
     private int kcal;
 
-    @OneToOne // by default, it will use product_id as join column
+    @OneToOne // by default, it will use product_id as join column (referenced table name + _id)
     @JoinColumn(name = "product")
     private Product product;
 
