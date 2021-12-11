@@ -16,6 +16,7 @@
         <module>course5</module>
         <module>course6</module>
         <module>course7</module>
+        <module>course8</module>
     </modules>
 
     <properties>
