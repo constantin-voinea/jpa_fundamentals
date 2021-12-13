@@ -1,6 +1,6 @@
 package entities;
 
-import main.pk.DepartmentPK;
+import entities.pk.DepartmentPK;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

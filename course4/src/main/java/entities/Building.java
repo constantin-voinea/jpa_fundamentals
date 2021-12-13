@@ -1,6 +1,6 @@
 package entities;
 
-import main.embeddables.BuildingPK;
+import entities.embeddables.BuildingPK;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;

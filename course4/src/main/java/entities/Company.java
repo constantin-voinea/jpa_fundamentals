@@ -1,6 +1,6 @@
 package entities;
 
-import main.embeddables.Address;
+import entities.embeddables.Address;
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.Column;

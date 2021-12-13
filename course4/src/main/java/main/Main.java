@@ -1,7 +1,7 @@
 package main;
 
-import main.embeddables.Address;
-import main.embeddables.BuildingPK;
+import entities.embeddables.Address;
+import entities.embeddables.BuildingPK;
 import entities.Building;
 import entities.Company;
 import entities.Department;
@@ -37,7 +37,7 @@ public class Main {
             Department d1 = new Department();
             d1.setName("dep 11");
             d1.setCode("c11d11");
-            d1.setNumber(111);
+            d1.setNumber(113);
             entityManager.persist(d1);
 
             // composed primary key using @EmbeddedId
@@ -45,7 +45,7 @@ public class Main {
             b1.setName("b1");
             b1.setId(new BuildingPK());
             b1.getId().setCode("bbb");
-            b1.getId().setNumber(11);
+            b1.getId().setNumber(112);
             entityManager.persist(b1);
 
             // AccessType example

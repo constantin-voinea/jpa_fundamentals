@@ -1,4 +1,4 @@
-package main.pk;
+package entities.pk;
 
 import java.io.Serializable;
 
@@ -7,15 +7,15 @@ import java.io.Serializable;
  */
 public class DepartmentPK implements Serializable {
 
-    private String name;
+    private String code;
     private int number;
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public int getNumber() {
